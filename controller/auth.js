@@ -1,6 +1,8 @@
 const bcrypt = require("bcrypt");
 const { response } = require("./../helper/responseHandler");
-const User = require("./../models/user");
+const User = require("../models/user.model");
+const query = require('../query/user.query')
+
 
 
 // ID Generator
@@ -115,6 +117,15 @@ exports.agentLogin = async (req, res, next) => {
     return response(500, false, null, "Error during agent login", res);
   }
 };
+
+//Client Details
+exports.clientDetails = async (req,res,next) => {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
 
 // Client Signup 
 exports.clientSignup = async (req, res, next) => {
